@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ClockShopModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Color">
+    <Key>
+      <PropertyRef Name="ColorID" />
+    </Key>
+    <Property Name="ColorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameColor" Type="varchar" MaxLength="255" />
+    <Property Name="rbg" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="CompID" />
+    </Key>
+    <Property Name="CompID" Type="int" Nullable="false" />
+    <Property Name="CompName" Type="varchar" MaxLength="255" />
+    <Property Name="NameConect" Type="varchar" MaxLength="255" />
+    <Property Name="Phone" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustID" />
+    </Key>
+    <Property Name="CustID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustName" Type="varchar" MaxLength="255" />
+    <Property Name="Adress" Type="varchar" MaxLength="255" />
+    <Property Name="CustMail" Type="varchar" MaxLength="255" />
+    <Property Name="PrivateOrBusines" Type="bit" />
+    <Property Name="CustPricePercent" Type="int" />
+  </EntityType>
+  <EntityType Name="Fix">
+    <Key>
+      <PropertyRef Name="FixID" />
+    </Key>
+    <Property Name="FixID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateGet" Type="date" />
+    <Property Name="StokDetailID" Type="int" />
+    <Property Name="CustID" Type="int" />
+    <Property Name="DescribeProblem" Type="varchar" MaxLength="255" />
+    <Property Name="WarrantyCard" Type="bit" />
+    <Property Name="FixPrice" Type="int" />
+    <Property Name="AgreeCust" Type="bit" />
+    <Property Name="Statuss" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Matche">
+    <Key>
+      <PropertyRef Name="MatchID" />
+    </Key>
+    <Property Name="MatchID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MatchName" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Model">
+    <Key>
+      <PropertyRef Name="ModeID" />
+    </Key>
+    <Property Name="ModeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompName" Type="varchar" MaxLength="255" />
+    <Property Name="CompID" Type="int" />
+    <Property Name="PriceBuy" Type="float" />
+    <Property Name="MatchId" Type="int" />
+    <Property Name="WaterSafe" Type="bit" />
+  </EntityType>
+  <EntityType Name="SalesAndReturns">
+    <Key>
+      <PropertyRef Name="SaleID" />
+    </Key>
+    <Property Name="SaleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SaleDate" Type="date" />
+    <Property Name="StokDetailID" Type="int" />
+    <Property Name="CustID" Type="int" />
+    <Property Name="SalePrice" Type="float" />
+    <Property Name="NumItem" Type="int" />
+  </EntityType>
+  <EntityType Name="StockDetails">
+    <Key>
+      <PropertyRef Name="StokDetailID" />
+    </Key>
+    <Property Name="StokDetailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateIncomeStock" Type="date" />
+    <Property Name="NumUnitStock" Type="int" />
+    <Property Name="ModeID" Type="int" />
+    <Property Name="ColorID" Type="int" />
+  </EntityType>
+  <Association Name="FK__Fix__CustID__5AEE82B9">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
+    <End Role="Fix" Type="Self.Fix" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="CustID" />
+      </Principal>
+      <Dependent Role="Fix">
+        <PropertyRef Name="CustID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Model__CompID__4BAC3F29">
+    <End Role="Company" Type="Self.Company" Multiplicity="0..1" />
+    <End Role="Model" Type="Self.Model" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="CompID" />
+      </Principal>
+      <Dependent Role="Model">
+        <PropertyRef Name="CompID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Model__MatchId__4CA06362">
+    <End Role="Matche" Type="Self.Matche" Multiplicity="0..1" />
+    <End Role="Model" Type="Self.Model" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Matche">
+        <PropertyRef Name="MatchID" />
+      </Principal>
+      <Dependent Role="Model">
+        <PropertyRef Name="MatchId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SalesAndR__CustI__5812160E">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
+    <End Role="SalesAndReturns" Type="Self.SalesAndReturns" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="CustID" />
+      </Principal>
+      <Dependent Role="SalesAndReturns">
+        <PropertyRef Name="CustID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SalesAndR__StokD__571DF1D5">
+    <End Role="StockDetails" Type="Self.StockDetails" Multiplicity="0..1" />
+    <End Role="SalesAndReturns" Type="Self.SalesAndReturns" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StockDetails">
+        <PropertyRef Name="StokDetailID" />
+      </Principal>
+      <Dependent Role="SalesAndReturns">
+        <PropertyRef Name="StokDetailID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StockDeta__Color__52593CB8">
+    <End Role="Color" Type="Self.Color" Multiplicity="0..1" />
+    <End Role="StockDetails" Type="Self.StockDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Color">
+        <PropertyRef Name="ColorID" />
+      </Principal>
+      <Dependent Role="StockDetails">
+        <PropertyRef Name="ColorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StockDeta__ModeI__5165187F">
+    <End Role="Model" Type="Self.Model" Multiplicity="0..1" />
+    <End Role="StockDetails" Type="Self.StockDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Model">
+        <PropertyRef Name="ModeID" />
+      </Principal>
+      <Dependent Role="StockDetails">
+        <PropertyRef Name="ModeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ClockShopModelStoreContainer">
+    <EntitySet Name="Color" EntityType="Self.Color" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Company" EntityType="Self.Company" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Fix" EntityType="Self.Fix" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Matche" EntityType="Self.Matche" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Model" EntityType="Self.Model" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SalesAndReturns" EntityType="Self.SalesAndReturns" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StockDetails" EntityType="Self.StockDetails" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Fix__CustID__5AEE82B9" Association="Self.FK__Fix__CustID__5AEE82B9">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Fix" EntitySet="Fix" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Model__CompID__4BAC3F29" Association="Self.FK__Model__CompID__4BAC3F29">
+      <End Role="Company" EntitySet="Company" />
+      <End Role="Model" EntitySet="Model" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Model__MatchId__4CA06362" Association="Self.FK__Model__MatchId__4CA06362">
+      <End Role="Matche" EntitySet="Matche" />
+      <End Role="Model" EntitySet="Model" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SalesAndR__CustI__5812160E" Association="Self.FK__SalesAndR__CustI__5812160E">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="SalesAndReturns" EntitySet="SalesAndReturns" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SalesAndR__StokD__571DF1D5" Association="Self.FK__SalesAndR__StokD__571DF1D5">
+      <End Role="StockDetails" EntitySet="StockDetails" />
+      <End Role="SalesAndReturns" EntitySet="SalesAndReturns" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StockDeta__Color__52593CB8" Association="Self.FK__StockDeta__Color__52593CB8">
+      <End Role="Color" EntitySet="Color" />
+      <End Role="StockDetails" EntitySet="StockDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StockDeta__ModeI__5165187F" Association="Self.FK__StockDeta__ModeI__5165187F">
+      <End Role="Model" EntitySet="Model" />
+      <End Role="StockDetails" EntitySet="StockDetails" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

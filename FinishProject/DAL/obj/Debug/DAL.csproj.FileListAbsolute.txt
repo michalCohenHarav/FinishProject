@@ -1,0 +1,12 @@
+D:\users\user1\Documents\מיכל תרגילים\פרוייקט סיום\FinishProject\DAL\bin\Debug\DAL.dll.config
+D:\users\user1\Documents\מיכל תרגילים\פרוייקט סיום\FinishProject\DAL\bin\Debug\DAL.dll
+D:\users\user1\Documents\מיכל תרגילים\פרוייקט סיום\FinishProject\DAL\bin\Debug\DAL.pdb
+D:\users\user1\Documents\מיכל תרגילים\פרוייקט סיום\FinishProject\DAL\bin\Debug\EntityFramework.dll
+D:\users\user1\Documents\מיכל תרגילים\פרוייקט סיום\FinishProject\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\users\user1\Documents\מיכל תרגילים\פרוייקט סיום\FinishProject\DAL\bin\Debug\EntityFramework.xml
+D:\users\user1\Documents\מיכל תרגילים\פרוייקט סיום\FinishProject\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\users\user1\Documents\מיכל תרגילים\פרוייקט סיום\FinishProject\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\users\user1\Documents\מיכל תרגילים\פרוייקט סיום\FinishProject\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\users\user1\Documents\מיכל תרגילים\פרוייקט סיום\FinishProject\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\users\user1\Documents\מיכל תרגילים\פרוייקט סיום\FinishProject\DAL\obj\Debug\DAL.dll
+D:\users\user1\Documents\מיכל תרגילים\פרוייקט סיום\FinishProject\DAL\obj\Debug\DAL.pdb

@@ -1,0 +1,6 @@
+D:\users\user1\Documents\מיכל תרגילים\פרוייקט סיום\FinishProject\DTO\bin\Debug\DTO.dll
+D:\users\user1\Documents\מיכל תרגילים\פרוייקט סיום\FinishProject\DTO\bin\Debug\DTO.pdb
+D:\users\user1\Documents\מיכל תרגילים\פרוייקט סיום\FinishProject\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\users\user1\Documents\מיכל תרגילים\פרוייקט סיום\FinishProject\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\users\user1\Documents\מיכל תרגילים\פרוייקט סיום\FinishProject\DTO\obj\Debug\DTO.dll
+D:\users\user1\Documents\מיכל תרגילים\פרוייקט סיום\FinishProject\DTO\obj\Debug\DTO.pdb

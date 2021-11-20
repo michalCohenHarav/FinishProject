@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ClockShopModelStoreContainer" CdmEntityContainer="ClockShopEntities">
+    <EntitySetMapping Name="Colors">
+      <EntityTypeMapping TypeName="ClockShopModel.Color">
+        <MappingFragment StoreEntitySet="Color">
+          <ScalarProperty Name="ColorID" ColumnName="ColorID" />
+          <ScalarProperty Name="NameColor" ColumnName="NameColor" />
+          <ScalarProperty Name="rbg" ColumnName="rbg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Companies">
+      <EntityTypeMapping TypeName="ClockShopModel.Company">
+        <MappingFragment StoreEntitySet="Company">
+          <ScalarProperty Name="CompID" ColumnName="CompID" />
+          <ScalarProperty Name="CompName" ColumnName="CompName" />
+          <ScalarProperty Name="NameConect" ColumnName="NameConect" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="ClockShopModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="CustID" ColumnName="CustID" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="CustMail" ColumnName="CustMail" />
+          <ScalarProperty Name="PrivateOrBusines" ColumnName="PrivateOrBusines" />
+          <ScalarProperty Name="CustPricePercent" ColumnName="CustPricePercent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fixes">
+      <EntityTypeMapping TypeName="ClockShopModel.Fix">
+        <MappingFragment StoreEntitySet="Fix">
+          <ScalarProperty Name="FixID" ColumnName="FixID" />
+          <ScalarProperty Name="DateGet" ColumnName="DateGet" />
+          <ScalarProperty Name="StokDetailID" ColumnName="StokDetailID" />
+          <ScalarProperty Name="CustID" ColumnName="CustID" />
+          <ScalarProperty Name="DescribeProblem" ColumnName="DescribeProblem" />
+          <ScalarProperty Name="WarrantyCard" ColumnName="WarrantyCard" />
+          <ScalarProperty Name="FixPrice" ColumnName="FixPrice" />
+          <ScalarProperty Name="AgreeCust" ColumnName="AgreeCust" />
+          <ScalarProperty Name="Statuss" ColumnName="Statuss" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Matches">
+      <EntityTypeMapping TypeName="ClockShopModel.Matche">
+        <MappingFragment StoreEntitySet="Matche">
+          <ScalarProperty Name="MatchID" ColumnName="MatchID" />
+          <ScalarProperty Name="MatchName" ColumnName="MatchName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Models">
+      <EntityTypeMapping TypeName="ClockShopModel.Model">
+        <MappingFragment StoreEntitySet="Model">
+          <ScalarProperty Name="ModeID" ColumnName="ModeID" />
+          <ScalarProperty Name="CompName" ColumnName="CompName" />
+          <ScalarProperty Name="CompID" ColumnName="CompID" />
+          <ScalarProperty Name="PriceBuy" ColumnName="PriceBuy" />
+          <ScalarProperty Name="MatchId" ColumnName="MatchId" />
+          <ScalarProperty Name="WaterSafe" ColumnName="WaterSafe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalesAndReturns">
+      <EntityTypeMapping TypeName="ClockShopModel.SalesAndReturn">
+        <MappingFragment StoreEntitySet="SalesAndReturns">
+          <ScalarProperty Name="SaleID" ColumnName="SaleID" />
+          <ScalarProperty Name="SaleDate" ColumnName="SaleDate" />
+          <ScalarProperty Name="StokDetailID" ColumnName="StokDetailID" />
+          <ScalarProperty Name="CustID" ColumnName="CustID" />
+          <ScalarProperty Name="SalePrice" ColumnName="SalePrice" />
+          <ScalarProperty Name="NumItem" ColumnName="NumItem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StockDetails">
+      <EntityTypeMapping TypeName="ClockShopModel.StockDetail">
+        <MappingFragment StoreEntitySet="StockDetails">
+          <ScalarProperty Name="StokDetailID" ColumnName="StokDetailID" />
+          <ScalarProperty Name="DateIncomeStock" ColumnName="DateIncomeStock" />
+          <ScalarProperty Name="NumUnitStock" ColumnName="NumUnitStock" />
+          <ScalarProperty Name="ModeID" ColumnName="ModeID" />
+          <ScalarProperty Name="ColorID" ColumnName="ColorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

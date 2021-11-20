@@ -1,0 +1,14 @@
+D:\users\user1\Documents\מיכל תרגילים\פרוייקט סיום\FinishProject\BL\bin\Debug\BL.dll
+D:\users\user1\Documents\מיכל תרגילים\פרוייקט סיום\FinishProject\BL\bin\Debug\BL.pdb
+D:\users\user1\Documents\מיכל תרגילים\פרוייקט סיום\FinishProject\BL\bin\Debug\DAL.dll
+D:\users\user1\Documents\מיכל תרגילים\פרוייקט סיום\FinishProject\BL\bin\Debug\DTO.dll
+D:\users\user1\Documents\מיכל תרגילים\פרוייקט סיום\FinishProject\BL\bin\Debug\EntityFramework.dll
+D:\users\user1\Documents\מיכל תרגילים\פרוייקט סיום\FinishProject\BL\bin\Debug\DAL.pdb
+D:\users\user1\Documents\מיכל תרגילים\פרוייקט סיום\FinishProject\BL\bin\Debug\DAL.dll.config
+D:\users\user1\Documents\מיכל תרגילים\פרוייקט סיום\FinishProject\BL\bin\Debug\DTO.pdb
+D:\users\user1\Documents\מיכל תרגילים\פרוייקט סיום\FinishProject\BL\bin\Debug\EntityFramework.xml
+D:\users\user1\Documents\מיכל תרגילים\פרוייקט סיום\FinishProject\BL\obj\Debug\BL.csprojAssemblyReference.cache
+D:\users\user1\Documents\מיכל תרגילים\פרוייקט סיום\FinishProject\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+D:\users\user1\Documents\מיכל תרגילים\פרוייקט סיום\FinishProject\BL\obj\Debug\BL.csproj.CopyComplete
+D:\users\user1\Documents\מיכל תרגילים\פרוייקט סיום\FinishProject\BL\obj\Debug\BL.dll
+D:\users\user1\Documents\מיכל תרגילים\פרוייקט סיום\FinishProject\BL\obj\Debug\BL.pdb
